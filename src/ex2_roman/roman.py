@@ -1,6 +1,7 @@
 def roman(number):
-    if number < 9:
+    if number < 40:
         symbols = {
+            10: 'X',
             5: 'V',
             1: 'I'
         }
@@ -17,7 +18,3 @@ def roman(number):
                     temp -= key - 1
                     break
         return roman_number
-    elif number == 9:
-        return 'IX'
-    elif number == 27:
-        return 'XXVII'
