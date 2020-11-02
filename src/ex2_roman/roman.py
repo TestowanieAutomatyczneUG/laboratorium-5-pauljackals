@@ -35,3 +35,5 @@ def roman(number):
         return roman_number
     elif number < 500:
         return roman(100) + 'D' + roman(number % 100)
+    elif number < 900:
+        return 'D' + roman(number-500)
