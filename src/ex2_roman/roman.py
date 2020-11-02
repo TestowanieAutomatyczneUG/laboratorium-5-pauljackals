@@ -2,8 +2,9 @@ import math
 
 
 def roman(number):
-    if number < 900:
+    if number < 4000:
         symbols = {
+            1000: 'M',
             500: 'D',
             100: 'C',
             50: 'L',
@@ -34,9 +35,3 @@ def roman(number):
                     if flag:
                         break
         return roman_number
-    elif number < 1000:
-        return roman(100) + 'M' + roman(number % 100)
-    elif number < 2000:
-        return 'M' + roman(number % 1000)
-    elif 3000 <= number < 4000:
-        return 'MMM' + roman(number % 1000)
