@@ -1,13 +1,7 @@
 class Hamming:
     def distance(self, string1, string2):
-        if string1 == 'AATG' and string2 == 'AAA':
-            raise ValueError("First strand can't be longer")
-        elif string1 == 'ATA' and string2 == 'AGTG':
-            raise ValueError("Second strand can't be longer")
-        elif string1 == '' and string2 == 'G':
-            raise ValueError("First strand can't be empty")
-        elif string1 == 'G' and string2 == '':
-            raise ValueError("Second strand can't be empty")
+        if len(string1) != len(string2):
+            raise ValueError("Strands must be the same length!")
         difference = 0
         for i in range(len(string1)):
             if string1[i] != string2[i]:
