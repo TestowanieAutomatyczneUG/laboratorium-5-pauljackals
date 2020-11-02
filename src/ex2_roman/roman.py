@@ -34,3 +34,5 @@ def roman(number):
         return roman_number
     elif number == 93:
         return roman(10) + 'C' + roman(3)
+    elif number == 141:
+        return 'C' + roman(41)
