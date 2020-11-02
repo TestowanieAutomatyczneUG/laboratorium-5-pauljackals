@@ -36,3 +36,5 @@ def roman(number):
         return roman_number
     elif number < 1000:
         return roman(100) + 'M' + roman(number % 100)
+    elif number < 2000:
+        return 'M' + roman(number % 1000)
