@@ -6,6 +6,8 @@ class Hamming:
             raise ValueError("Second strand can't be longer")
         elif string1 == '' and string2 == 'G':
             raise ValueError("First strand can't be empty")
+        elif string1 == 'G' and string2 == '':
+            raise ValueError("Second strand can't be empty")
         difference = 0
         for i in range(len(string1)):
             if string1[i] != string2[i]:
