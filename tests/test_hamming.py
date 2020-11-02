@@ -3,7 +3,6 @@ from ex1_hamming.hamming import Hamming
 
 
 class HammingTest(unittest.TestCase):
-    # @unittest.skip
     def test_empty_strands(self):
         self.assertEqual(self.hamming.distance("", ""), 0)
 
