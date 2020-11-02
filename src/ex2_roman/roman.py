@@ -2,8 +2,9 @@ import math
 
 
 def roman(number):
-    if number < 90:
+    if number < 400:
         symbols = {
+            100: 'C',
             50: 'L',
             10: 'X',
             5: 'V',
@@ -32,9 +33,3 @@ def roman(number):
                     if flag:
                         break
         return roman_number
-    elif number == 93:
-        return roman(10) + 'C' + roman(3)
-    elif number == 141:
-        return 'C' + roman(41)
-    elif number == 163:
-        return 'C' + roman(63)
