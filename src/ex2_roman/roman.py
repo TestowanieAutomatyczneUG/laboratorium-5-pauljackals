@@ -34,3 +34,5 @@ def roman(number):
                     if flag:
                         break
         return roman_number
+    elif number < 1000:
+        return roman(100) + 'M' + roman(number % 100)
