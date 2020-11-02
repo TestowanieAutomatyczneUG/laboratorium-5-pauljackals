@@ -22,3 +22,5 @@ def roman(number):
         return 'XL'+roman(8)
     elif number == 49:
         return 'XL'+roman(9)
+    elif number == 59:
+        return 'L'+roman(9)
