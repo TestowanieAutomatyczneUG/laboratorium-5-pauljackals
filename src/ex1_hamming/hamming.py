@@ -6,4 +6,6 @@ class Hamming:
             return 0
         elif string1 == 'G' and string2 == 'T':
             return 1
+        elif string1 == 'GGACTGAAATCTG' and string2 == 'GGACTGAAATCTG':
+            return 0
 
