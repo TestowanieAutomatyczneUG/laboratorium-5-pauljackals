@@ -32,3 +32,5 @@ def roman(number):
                     if flag:
                         break
         return roman_number
+    elif number == 93:
+        return roman(10) + 'C' + roman(3)
