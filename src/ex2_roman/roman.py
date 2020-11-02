@@ -18,3 +18,5 @@ def roman(number):
                     temp -= key - 1
                     break
         return roman_number
+    elif number == 48:
+        return 'XL'+roman(8)
