@@ -20,3 +20,5 @@ def roman(number):
         return roman_number
     elif number == 48:
         return 'XL'+roman(8)
+    elif number == 49:
+        return 'XL'+roman(9)
