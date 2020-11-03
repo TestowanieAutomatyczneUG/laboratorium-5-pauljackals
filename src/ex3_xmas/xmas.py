@@ -1,16 +1,35 @@
 class Xmas:
 
     @staticmethod
-    def get_verse(number):
-        if number == 1:
-            return 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.'
-        elif number == 2:
-            return 'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.'
-        elif number == 3:
-            return 'On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.'
-        elif number == 4:
-            return 'On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.'
-        elif number == 5:
-            return 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.'
-        elif number == 6:
-            return 'On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.'
+    def __text(index):
+        numerals = [
+            'first',
+            'second',
+            'third',
+            'fourth',
+            'fifth',
+            'sixth'
+        ]
+        gifts = [
+            'a Partridge in a Pear Tree',
+            'two Turtle Doves',
+            'three French Hens',
+            'four Calling Birds',
+            'five Gold Rings',
+            'six Geese-a-Laying'
+        ]
+        verse = 'On the ' + numerals[index] + ' day of Christmas my true love gave to me: '
+        for i in range(index, -1, -1):
+            if i == 0 and index > 0:
+                verse += 'and '
+            verse += gifts[i]
+            if i == 0:
+                verse += '.'
+            else:
+                verse += ', '
+        return verse
+
+    @classmethod
+    def get_verse(cls, number):
+        if 1 <= number <= 6:
+            return cls.__text(number-1)
