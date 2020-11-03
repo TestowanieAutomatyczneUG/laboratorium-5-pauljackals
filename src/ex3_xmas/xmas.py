@@ -50,3 +50,5 @@ class Xmas:
     def get_verses(cls, start, end):
         if start == 2 and end == 4:
             return cls.get_verse(2) + '\n\n' + cls.get_verse(3) + '\n\n' + cls.get_verse(4)
+        elif start == end and start == 8:
+            return cls.get_verse(8)
