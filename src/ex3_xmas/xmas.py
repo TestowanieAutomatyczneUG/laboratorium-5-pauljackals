@@ -10,7 +10,8 @@ class Xmas:
             'fifth',
             'sixth',
             'seventh',
-            'eighth'
+            'eighth',
+            'ninth'
         ]
         gifts = [
             'a Partridge in a Pear Tree',
@@ -20,7 +21,8 @@ class Xmas:
             'five Gold Rings',
             'six Geese-a-Laying',
             'seven Swans-a-Swimming',
-            'eight Maids-a-Milking'
+            'eight Maids-a-Milking',
+            'nine Ladies Dancing'
         ]
         verse = 'On the ' + numerals[index] + ' day of Christmas my true love gave to me: '
         for i in range(index, -1, -1):
@@ -35,5 +37,5 @@ class Xmas:
 
     @classmethod
     def get_verse(cls, number):
-        if 1 <= number <= 8:
+        if 1 <= number <= 9:
             return cls.__text(number-1)
