@@ -30,7 +30,9 @@ class Xmas:
 
     @classmethod
     def get_verse(cls, number):
-        if 1 <= number <= len(cls.__gifts):
+        if type(number) != int:
+            raise TypeError('Verse number must be an integer')
+        elif 1 <= number <= len(cls.__gifts):
             return cls.__text(number-1)
         else:
             raise IndexError('Verse out of range')
