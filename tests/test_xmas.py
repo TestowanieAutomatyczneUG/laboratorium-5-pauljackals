@@ -21,6 +21,9 @@ class XmasTest(unittest.TestCase):
     def test_verse_6(self):
         self.assertEqual(Xmas.get_verse(6), 'On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
 
+    def test_verse_7(self):
+        self.assertEqual(Xmas.get_verse(7), 'On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.')
+
 
 if __name__ == '__main__':
     unittest.main()
