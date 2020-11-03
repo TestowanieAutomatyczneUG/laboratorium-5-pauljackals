@@ -73,6 +73,10 @@ class XmasTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Xmas.get_verses(7, 2)
 
+    def test_verses_out_of_range(self):
+        with self.assertRaises(IndexError):
+            Xmas.get_verses(5, 14)
+
 
 if __name__ == '__main__':
     unittest.main()
