@@ -39,7 +39,7 @@ class Xmas:
 
     @classmethod
     def get_verses(cls, start, end):
-        if type(start) == type(end) != int:
+        if type(start) != int or type(end) != int:
             raise TypeError('Verses numbers must be integers')
         elif 1 <= start <= end <= len(cls.__gifts):
             string = ''
