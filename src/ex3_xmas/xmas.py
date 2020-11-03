@@ -48,7 +48,10 @@ class Xmas:
 
     @classmethod
     def get_verses(cls, start, end):
-        if start == 2 and end == 4:
-            return cls.get_verse(2) + '\n\n' + cls.get_verse(3) + '\n\n' + cls.get_verse(4)
-        elif start == end and start == 8:
-            return cls.get_verse(8)
+        if start <= end and 1 <= start <= 12 and 1 <= end <= 12:
+            string = ''
+            for i in range(start, end+1):
+                string += cls.get_verse(i)
+                if i != end:
+                    string += '\n\n'
+            return string
