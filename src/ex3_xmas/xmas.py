@@ -16,24 +16,24 @@ class Xmas:
     ]
 
     @classmethod
-    def __text(cls, index):
-        verse = 'On the ' + cls.__gifts[index][0] + ' day of Christmas my true love gave to me: '
-        for i in range(index, -1, -1):
-            if i == 0 and index > 0:
-                verse += 'and '
-            verse += cls.__gifts[i][1]
-            if i == 0:
-                verse += '.'
-            else:
-                verse += ', '
-        return verse
-
-    @classmethod
     def get_verse(cls, number):
         if type(number) != int:
             raise TypeError('Verse number must be an integer')
+
         elif 1 <= number <= len(cls.__gifts):
-            return cls.__text(number-1)
+
+            index = number - 1
+            verse = 'On the ' + cls.__gifts[index][0] + ' day of Christmas my true love gave to me: '
+            for i in range(index, -1, -1):
+                if i == 0 and index > 0:
+                    verse += 'and '
+                verse += cls.__gifts[i][1]
+                if i == 0:
+                    verse += '.'
+                else:
+                    verse += ', '
+            return verse
+
         else:
             raise IndexError('Verse out of range')
 
