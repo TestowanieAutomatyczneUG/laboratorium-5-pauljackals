@@ -46,6 +46,8 @@ class Xmas:
                 if i != end:
                     string += '\n\n'
             return string
+        elif start > end:
+            raise ValueError("Start can't be bigger than end")
 
     @classmethod
     def get_verses_all(cls):
