@@ -42,3 +42,7 @@ class Xmas:
                 if i != end:
                     string += '\n\n'
             return string
+
+    @classmethod
+    def get_verses_all(cls):
+        return cls.get_verses(1, len(cls.__gifts))
