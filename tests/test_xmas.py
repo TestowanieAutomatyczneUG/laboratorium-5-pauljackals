@@ -69,6 +69,10 @@ class XmasTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             Xmas.get_verse([])
 
+    def test_verses_start_bigger_than_end(self):
+        with self.assertRaises(ValueError):
+            Xmas.get_verses(7, 2)
+
 
 if __name__ == '__main__':
     unittest.main()
