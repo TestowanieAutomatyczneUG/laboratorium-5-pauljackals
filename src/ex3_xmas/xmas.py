@@ -32,6 +32,8 @@ class Xmas:
     def get_verse(cls, number):
         if 1 <= number <= len(cls.__gifts):
             return cls.__text(number-1)
+        else:
+            raise IndexError('Verse out of range')
 
     @classmethod
     def get_verses(cls, start, end):
