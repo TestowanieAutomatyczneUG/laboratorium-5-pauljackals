@@ -48,6 +48,8 @@ class Xmas:
             return string
         elif start > end:
             raise ValueError("Start can't be bigger than end")
+        else:
+            raise IndexError("Verses out of range")
 
     @classmethod
     def get_verses_all(cls):
