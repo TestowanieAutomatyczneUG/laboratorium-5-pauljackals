@@ -65,6 +65,10 @@ class XmasTest(unittest.TestCase):
         with self.assertRaises(IndexError):
             Xmas.get_verse(-1)
 
+    def test_verse_wrong_type(self):
+        with self.assertRaises(TypeError):
+            Xmas.get_verse([])
+
 
 if __name__ == '__main__':
     unittest.main()
